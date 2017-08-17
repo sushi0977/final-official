@@ -20,7 +20,7 @@ class messageTest extends \Codeception\Test\Unit
     public function testMessageID() {
         // arrange
         $message = new \Domain\message();
-        $expected = "300";
+        $expected = '300';
         $message->SetMessageID($expected);
         // act
         $actual = $message->messageID();
@@ -39,6 +39,27 @@ class messageTest extends \Codeception\Test\Unit
         $this->assertEquals($expected, $actual);
     }
 
+    public function testRoomUserID() {
+        // arrange
+        $message = new \Domain\message();
+        $expected = NULL;
+        $message->SetRoomUserID($expected);
+        // act
+        $actual = $message->roomUserID();
+        // assert
+        $this->assertEquals($expected, $actual);
+    }
+
+    public function testChatRoomID() {
+        // arrange
+        $message = new \Domain\message();
+        $expected = NULL;
+        $message->SetChatRoomID($expected);
+        // act
+        $actual = $message->chatRoomID();
+        // assert
+        $this->assertEquals($expected, $actual);
+    }
 
 
 }

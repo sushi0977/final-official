@@ -19,10 +19,11 @@ class UserTest extends \Codeception\Test\Unit
 
     // tests
 
+
     public function testUserID() {
         // arrange
         $user = new \Domain\user();
-        $expected = "100";
+        $expected = '100';
         $user->SetUserID($expected);
         // act
         $actual = $user->userID();
